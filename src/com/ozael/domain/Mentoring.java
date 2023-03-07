@@ -7,10 +7,6 @@ public class Mentoring extends Content {
 
     private LocalDate date;
 
-    public Mentoring(LocalDate date) {
-        this.date = date;
-    }
-
     @Override
     public double calcXP() {
         return DEFAULT_XP + 20d;
@@ -22,5 +18,12 @@ public class Mentoring extends Content {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Mentoria: " + getTitle() +
+                "`- Descrição: " + getDescription() +
+                " - Data: " + date;
     }
 }
